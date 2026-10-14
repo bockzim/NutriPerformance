@@ -1,0 +1,1 @@
+tailwind.config={theme:{extend:{colors:{bg:'var(--bg)',card:'var(--card)',ink:'var(--ink)',gy:'var(--gy)',gl:'var(--gl)',bd:'var(--bd)',g:'var(--g)',gt:'var(--gt)',gs:'var(--gs)',gs2:'var(--gs2)',deep:'var(--deep)'},fontFamily:{sora:['Sora','sans-serif'],inter:['Inter','sans-serif'],pop:['Poppins','sans-serif']}}}}
