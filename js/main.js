@@ -4,7 +4,7 @@
 
 const C={price:{basic:'R$10,00',full:'R$29,90',popup:'R$19,90',total:'R$297,00'},
  save:'Você economiza R$267,10',pct:'≈ 90% DE ECONOMIA',label:'Promoção por tempo limitado · Preço de lançamento',
- links:{basic:'#checkout-basico',full:'#checkout-completo',popup:'#checkout-popup'}};
+ links:{basic:'https://pay.wiapy.com/PDXMEajrmuRF',full:'https://pay.wiapy.com/eK4cznAMhz90',popup:'https://pay.wiapy.com/nasu-bBqnoZ'}};
 const $=id=>document.getElementById(id);
 document.querySelectorAll('[data-p]').forEach(e=>e.textContent=C.price[e.dataset.p]);
 document.querySelectorAll('[data-l]').forEach(e=>e.textContent=C.label);
@@ -26,11 +26,16 @@ document.querySelectorAll('.faq > div:first-child').forEach(h=>{const t=()=>{con
 $('pl').innerHTML=['108 documentos em vez de 13','Mais de 10 bônus inclusos','Acesso vitalício e compra única'].map(t=>`<li class="flex gap-2"><span class="text-[#1C8A44] font-extrabold">✓</span>${t}</li>`).join('');
 $('py').textContent=`SIM, QUERO O COMPLETO POR ${C.price.popup} →`;
 $('pn').textContent=`Não, quero continuar só com o básico por ${C.price.basic}`;
-const pop=$('pop');let shown=0;
-const open=()=>{if(shown)return;shown=1;pop.classList.add('show')};
-const close=()=>pop.classList.remove('show');$('px').onclick=close;pop.addEventListener('click',e=>{if(e.target===pop)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
-$('bb').addEventListener('click',e=>{if(!shown){e.preventDefault();open()}});
-document.addEventListener('mouseleave',e=>{if(e.clientY<=0)open()});
+// Popup de oferta única: abre SÓ ao clicar em "Acesso básico" (uma vez por visita).
+// Depois de fechado, um novo clique no básico segue direto para o checkout do básico.
+const pop=$('pop');let shown=0,last=null;pop.inert=true;
+const open=()=>{shown=1;last=document.activeElement;pop.inert=false;pop.classList.add('show');document.body.style.overflow='hidden';$('py').focus({preventScroll:true})};
+const close=()=>{pop.classList.remove('show');pop.inert=true;document.body.style.overflow='';if(last&&last.focus)last.focus({preventScroll:true})};
+$('px').onclick=close;
+pop.addEventListener('click',e=>{if(e.target===pop)close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pop.classList.contains('show'))close()});
+pop.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=[...pop.querySelectorAll('button,a[href]')],a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}});
+$('bb').addEventListener('click',e=>{if(shown||e.ctrlKey||e.metaKey||e.shiftKey||e.button)return;e.preventDefault();open()});
 // barra fixa de CTA (mobile): aparece depois do hero e some nos planos e no fim da página
 const sb=$('sb'),vis={topo:1,planos:0,fim:0};
 const upd=()=>{const on=!vis.topo&&!vis.planos&&!vis.fim;sb.classList.toggle('show',on);sb.inert=!on};

@@ -11,9 +11,9 @@ HTML + Tailwind (CDN, só utilitários) + `css/style.css` (tokens e componentes)
 | Kit Esportivo (13) | 4 blocos: anamnese e triagem, avaliação e acompanhamento, roteiros de consulta, organização do consultório |
 | Complemento Clínico (81) | 6 especialidades (emagrecimento, clínica geral, gestante e lactante, pediatria, terceira idade, vegetariano/vegano), condições comuns (lactose, celíaca, diabetes, hipertensão), tabelas de referência, casos, FAQs, diários, sinais de alerta, checklists, gestão e marketing |
 | Bônus (mais de 10) | 2 visuais prontos + os demais de apoio |
-| Total | 94 documentos + mais de 10 bônus = mais de 100 ferramentas |
+| Total | 108 documentos + mais de 10 bônus = mais de 100 ferramentas |
 
-Regra do "+100": 94 documentos + pelo menos 7 bônus já passam de 100. Para manter "mais de 10 bônus", o acesso completo precisa ter **no mínimo 11 bônus**.
+Regra do "+100": 108 documentos + pelo menos 7 bônus já passam de 100. Para manter "mais de 10 bônus", o acesso completo precisa ter **no mínimo 11 bônus**.
 
 **Planos e valores (mantidos da página enviada):** Básico R$10,00 (Kit Esportivo, 13) · Completo R$29,90 (tudo + mais de 10 bônus) · Popup R$19,90 · valor total estimado R$297,00 · economia R$267,10 (≈ 90%) · "R$19,90 a mais".
 
@@ -28,7 +28,7 @@ Header · Hero (`#topo`) · Prévia (carrossel de 21 capas) · 3 momentos + call
 ## 5. Pendências
 - Imagens: todas as da página estão preenchidas (ver `LISTA-IMAGENS.md`).
 - Lista final dos bônus (a página diz "mais de 10 bônus" e cita só o Mapa do Atendimento e o Cartão de Sinais de Alerta).
-- Links de checkout (`#checkout-*`), WhatsApp, e-mail e política de privacidade.
+- Política de privacidade (link ainda vazio). Checkouts (Wiapy) e e-mail de suporte já ligados.
 - Prévias dos documentos do Complemento (a amostra tem 21).
 
 ## 6. Ajustes de lançamento

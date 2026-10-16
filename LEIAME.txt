@@ -1,7 +1,7 @@
 NutriPerformance — página de vendas
 Estrutura: index.html, css/style.css, js/main.js, js/tailwind.config.js, images/, media/.
 1) Troque os arquivos de images/ mantendo os mesmos nomes (hoje são placeholders).
-2) Preços e links de checkout: topo do js/main.js (objeto C).
+2) Preços e links de checkout (Wiapy): topo do js/main.js (objeto C).
 3) Pixel/UTMify: cole o seu código no <head> do index.html.
-4) Textos entre [colchetes] são para preencher (depoimentos, WhatsApp, e-mail).
+4) Suporte: e-mail nutriperformancesuport@gmail.com (index.html, buscar "mailto").
 5) O Tailwind carrega pelo CDN; para produção, gere o CSS com o build do Tailwind.
