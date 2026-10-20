@@ -4,7 +4,7 @@
 
 const C={price:{basic:'R$10,00',full:'R$29,90',popup:'R$19,90',total:'R$297,00'},
  save:'Você economiza R$267,10',pct:'≈ 90% DE ECONOMIA',label:'Promoção por tempo limitado · Preço de lançamento',
- links:{basic:'#checkout-basico',full:'#checkout-completo',popup:'#checkout-popup'}};
+ links:{basic:'https://pay.wiapy.com/PDXMEajrmuRF',full:'https://pay.wiapy.com/eK4cznAMhz90',popup:'https://pay.wiapy.com/nasu-bBqnoZ'}};
 const $=id=>document.getElementById(id);
 document.querySelectorAll('[data-p]').forEach(e=>e.textContent=C.price[e.dataset.p]);
 document.querySelectorAll('[data-l]').forEach(e=>e.textContent=C.label);
@@ -15,7 +15,7 @@ const card=(d,x,i)=>`<div ${x?'aria-hidden="true"':''} class="${x?'dup ':''}shri
 $('mat').innerHTML=docs.map((d,i)=>card(d,0,i)).concat(docs.map((d,i)=>card(d,1,i))).join('');
 const st=[['Kit Esportivo','13 documentos em 4 blocos: anamnese e triagem, avaliação e acompanhamento, roteiros de consulta e organização do consultório','R$69,90'],['Complemento Clínico · atendimento por especialidade','Emagrecimento, clínica geral, gestante e lactante, pediatria, terceira idade e vegetariano/vegano: anamneses, roteiros de 1ª consulta e retorno, questionários por objetivo, evolução e reavaliação','R$79,90'],['Complemento Clínico · condições e apoio','Lactose, celíaca, diabetes e hipertensão, tabelas de referência, estudos de caso, FAQs, diários alimentares, sinais de alerta e checklists','R$49,90'],['Complemento Clínico · gestão e marketing','Script de objeções, e-mails, modelos de post, indicadores, certificado e apresentação do serviço','R$39,90'],['Mais de 10 bônus exclusivos do acesso completo','Mapa do Atendimento Esportivo, Cartão de Sinais de Alerta e outros bônus de apoio','R$57,40']];
 $('rows').innerHTML=st.map(([n,s,v],i)=>{const b=i>3;return `<div class="flex items-center justify-between gap-4 px-[18px] py-4 rounded-xl mx-1.5 my-1 ${b?'bg-gs':''}"><div class="font-semibold text-[14.5px]"><span class="text-g font-extrabold mr-3">✓</span>${n}${s?`<span class="block text-xs font-normal text-gl ml-7">${s}</span>`:''}</div><div class="text-right shrink-0">${b?`<s class="block text-[12.5px] text-gl">${v}</s><b class="text-gt text-[13px] font-extrabold tracking-wide">GRÁTIS</b>`:`<span class="text-[13.5px] text-gy">${v}</span><span class="block text-[11px] text-gl mt-0.5">valor estimado</span>`}</div></div>`}).join('');
-const L=(a,y)=>a.map(t=>`<li class="flex items-center gap-2 ${y?'':'text-[#C0392B]'}"><span class="font-extrabold ${y?'text-g':'text-[#D64536]'}">${y?'✓':'✕'}</span>${t}</li>`).join('');
+const L=(a,y)=>a.map(t=>`<li class="flex items-center gap-2 ${y?'':'text-[#FF6B5E]'}"><span class="font-extrabold ${y?'text-g':'text-[#FF5A4A]'}">${y?'✓':'✕'}</span>${t}</li>`).join('');
 $('lb').innerHTML=L(['13 documentos do Kit Esportivo','Acesso vitalício','Compra única'],1)+L(['Sem o Complemento Clínico (81 documentos)','Sem as 6 especialidades clínicas','Sem gestão e marketing do consultório','Sem os mais de 10 bônus'],0);
 $('lf').innerHTML=L(['108 documentos: Kit Esportivo + Complemento Clínico','6 especialidades e condições comuns','Gestão e marketing do consultório','Mais de 10 bônus exclusivos','Materiais sempre disponíveis, acesso vitalício e compra única'],1).replace(/<li class="flex/,'<li class="font-bold text-gt flex');
 const rw=[['Documentos','13','108'],['Kit Esportivo (atleta amador e academia)','Sim','Sim'],['6 especialidades clínicas','✕','Incluídas'],['Lactose, celíaca, diabetes e hipertensão','✕','Incluídas'],['Tabelas de referência, casos e FAQs','✕','Incluídos'],['Gestão e marketing do consultório','✕','Incluídos'],['Bônus (mais de 10)','✕','Incluídos'],['Acesso vitalício','Sim','Sim']];
@@ -23,14 +23,19 @@ $('cmp').innerHTML=rw.map(r=>`<tr class="border-t border-bd"><td class="px-[22px
 const fq=[['Qual a diferença entre o básico e o completo?','O básico traz o Kit Esportivo (13 documentos). O completo traz tudo: o Kit Esportivo, o Complemento Clínico (81 documentos) e mais de 10 bônus, exclusivos dele. Os dois dão acesso vitalício, com tudo sempre disponível.'],['Serve para qual tipo de paciente?','Para vários. O Kit Esportivo atende atletas amadores e frequentadores de academia. O Complemento Clínico cobre emagrecimento, clínica geral, gestante e lactante, pediatria, terceira idade e vegetariano/vegano, além de lactose, doença celíaca, diabetes e hipertensão.'],['Como recebo os materiais?','Assim que o pagamento for confirmado, você recebe o acesso e os materiais ficam sempre disponíveis, organizados para baixar no celular, tablet ou computador.'],['É assinatura mensal?','Não. O pagamento é único e o acesso é vitalício: pague uma vez e use para sempre, sem cobranças recorrentes.'],['Posso imprimir os documentos?','Sim. Os PDFs foram feitos para impressão e também podem ser consultados na tela.'],['Os materiais trazem plano alimentar pronto?','Não. São ferramentas de registro, organização e apoio ao atendimento; a prescrição é do nutricionista.'],['O termo de consentimento tem validade jurídica?','É um modelo-base de uso geral. Recomendamos que um advogado revise e ajuste antes de usar com pacientes.'],['Como funciona a garantia?','Vale por 7 dias após a compra. Se o material não ajudar, peça o reembolso nesse prazo e devolvemos 100% do valor.']];
 $('faq').innerHTML=fq.map(([q,a])=>`<div class="faq card !rounded-xl mb-2.5 overflow-hidden"><div class="flex items-center justify-between px-[22px] py-[18px] font-semibold text-[14.5px] cursor-pointer" role="button" tabindex="0" aria-expanded="false">${q}<span class="chev text-gl transition-transform">⌄</span></div><div class="a"><p class="px-[22px] pb-5 text-[13.8px] text-gy leading-relaxed">${a}</p></div></div>`).join('');
 document.querySelectorAll('.faq > div:first-child').forEach(h=>{const t=()=>{const f=h.parentElement;f.classList.toggle('open');h.setAttribute('aria-expanded',f.classList.contains('open'))};h.onclick=t;h.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();t()}}});
-$('pl').innerHTML=['108 documentos em vez de 13','Mais de 10 bônus inclusos','Acesso vitalício e compra única'].map(t=>`<li class="flex gap-2"><span class="text-[#1C8A44] font-extrabold">✓</span>${t}</li>`).join('');
+$('pl').innerHTML=['108 documentos em vez de 13','Mais de 10 bônus inclusos','Acesso vitalício e compra única'].map(t=>`<li class="flex gap-2"><span class="text-[#39FF14] font-extrabold">✓</span>${t}</li>`).join('');
 $('py').textContent=`SIM, QUERO O COMPLETO POR ${C.price.popup} →`;
 $('pn').textContent=`Não, quero continuar só com o básico por ${C.price.basic}`;
-const pop=$('pop');let shown=0;
-const open=()=>{if(shown)return;shown=1;pop.classList.add('show')};
-const close=()=>pop.classList.remove('show');$('px').onclick=close;pop.addEventListener('click',e=>{if(e.target===pop)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
-$('bb').addEventListener('click',e=>{if(!shown){e.preventDefault();open()}});
-document.addEventListener('mouseleave',e=>{if(e.clientY<=0)open()});
+// Popup de oferta única: abre SÓ ao clicar em "Acesso básico" (uma vez por visita).
+// Depois de fechado, um novo clique no básico segue direto para o checkout do básico.
+const pop=$('pop');let shown=0,last=null;pop.inert=true;
+const open=()=>{shown=1;last=document.activeElement;pop.inert=false;pop.classList.add('show');document.body.style.overflow='hidden';$('py').focus({preventScroll:true})};
+const close=()=>{pop.classList.remove('show');pop.inert=true;document.body.style.overflow='';if(last&&last.focus)last.focus({preventScroll:true})};
+$('px').onclick=close;
+pop.addEventListener('click',e=>{if(e.target===pop)close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pop.classList.contains('show'))close()});
+pop.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=[...pop.querySelectorAll('button,a[href]')],a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}});
+$('bb').addEventListener('click',e=>{if(shown||e.ctrlKey||e.metaKey||e.shiftKey||e.button)return;e.preventDefault();open()});
 // barra fixa de CTA (mobile): aparece depois do hero e some nos planos e no fim da página
 const sb=$('sb'),vis={topo:1,planos:0,fim:0};
 const upd=()=>{const on=!vis.topo&&!vis.planos&&!vis.fim;sb.classList.toggle('show',on);sb.inert=!on};
