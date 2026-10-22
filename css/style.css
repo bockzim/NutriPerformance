@@ -1,5 +1,5 @@
 /* NutriPerformance: tokens, base, componentes e ajustes mobile (equivale ao antigo bloco text/tailwindcss) */
-:root{--bg:#FAFBF9;--card:#FFFFFF;--ink:#14231B;--gy:#55635B;--gl:#7C8981;--bd:#E4E9E5;--g:#1E8A45;--gt:#17753A;--gs:#F0F8F2;--gs2:#D9EDDF;--deep:#12261B;--h1:#E9F5EC;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#F1F5F2;--card:#FFFFFF;--ink:#14231B;--gy:#4F5D55;--gl:#74817A;--bd:#D3DDD6;--g:#1E8A45;--gt:#17753A;--gs:#E6F2E9;--gs2:#C4E1CF;--deep:#12261B;--h1:#D9EDDF;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent}
 body{background:var(--bg);color:var(--ink);font-family:Inter,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 h1,h2,h3{font-family:Sora,sans-serif;letter-spacing:-.025em}
@@ -33,7 +33,7 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(-
 .sh p{margin-top:.875rem;color:var(--gy);line-height:1.625}
 .sh .tag{margin-bottom:.875rem}
 @media(min-width:640px){.sh h2{font-size:34px}}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:1rem;box-shadow:0 1px 2px rgba(18,38,27,.04)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:1rem;box-shadow:0 1px 2px rgba(18,38,27,.06),0 10px 24px -16px rgba(18,38,27,.22)}
 .ph{display:flex;align-items:center;justify-content:center;padding:.75rem;background:var(--gs);border:2px dashed var(--gs2);color:var(--gt);font-size:12.5px;font-weight:600;text-align:center}
 .pill{display:inline-block;background:var(--gs2);color:var(--gt);font-size:.75rem;line-height:1rem;font-weight:700;padding:.375rem .875rem;border-radius:9999px}
 .gnote{text-align:center;margin-top:.625rem;font-size:12.5px;font-weight:600;color:var(--gt)}
@@ -67,3 +67,8 @@ a:focus-visible,summary:focus-visible,.btn:focus-visible{outline:3px solid var(-
   #ft{padding-bottom:6.5rem}
 }
 #ft a{display:inline-block;padding:.35rem 0}
+
+/* ritmo de seções: faixas alternadas (claro/branco) para separar blocos */
+body>section.sec:nth-of-type(even){background:#fff;border-block:1px solid var(--bd)}
+body>section.sec:nth-of-type(even) .card{background:#F6F9F7}
+body>section.sec:nth-of-type(even) .card.hl,body>section.sec:nth-of-type(even) .card[class*="border-g"]{background:#fff}
