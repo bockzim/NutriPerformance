@@ -6,3 +6,4 @@ Estrutura: index.html, css/style.css, js/main.js, js/tailwind.config.js, images/
 4) Suporte: e-mail nutriperformancesuport@gmail.com (index.html, buscar "mailto").
 5) O Tailwind carrega pelo CDN; para produção, gere o CSS com o build do Tailwind.
 6)kjiu
+7)dadadsada
