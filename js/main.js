@@ -40,3 +40,18 @@ $('bb').addEventListener('click',e=>{if(shown||e.ctrlKey||e.metaKey||e.shiftKey|
 const sb=$('sb'),vis={topo:1,planos:0,fim:0};
 const upd=()=>{const on=!vis.topo&&!vis.planos&&!vis.fim;sb.classList.toggle('show',on);sb.inert=!on};
 if('IntersectionObserver' in window)Object.keys(vis).forEach(k=>{const el=$(k);if(el)new IntersectionObserver(([x])=>{vis[k]=x.isIntersecting?1:0;upd()}).observe(el)});
+
+// Prova social: prints/depoimentos de compradores em images/provas/. Lista vazia = seção oculta.
+const PROVAS=[
+  {src:'images/provas/depoimento-1.jpg',alt:'Conversa de WhatsApp com uma nutricionista sobre o guia de conduta e o checklist de anamnese'},
+  {src:'images/provas/depoimento-2.jpg',alt:'Conversa de WhatsApp sobre o roteiro de consulta e os checklists'},
+  {src:'images/provas/depoimento-3.jpg',alt:'Conversa de WhatsApp sobre o roteiro de consulta e a anamnese'},
+  {src:'images/provas/depoimento-4.jpg',alt:'Conversa de WhatsApp perguntando se o kit vale a pena'},
+  {src:'images/provas/depoimento-5.jpg',alt:'Conversa de WhatsApp sobre a organização das consultas'},
+];
+if(PROVAS.length){
+  const pc=(d,x)=>`<div ${x?'aria-hidden="true"':''} class="proof-card"><img src="${d.src}" alt="${x?'':d.alt}" loading="lazy" decoding="async"></div>`;
+  const sec=document.createElement('section');sec.className='sec';sec.id='prova';
+  sec.innerHTML=`<div class="wrap"><div class="sh"><div class="eyebrow tag">QUEM JÁ USA</div><h2>O que dizem os nutricionistas que usam o kit</h2></div><div class="mq"><div class="track" style="animation-duration:${Math.max(30,PROVAS.length*8)}s">${PROVAS.map(d=>pc(d,0)).concat(PROVAS.map(d=>pc(d,1))).join('')}</div></div></div>`;
+  const prev=$('mat').closest('section');prev.parentNode.insertBefore(sec,prev.nextSibling);
+}

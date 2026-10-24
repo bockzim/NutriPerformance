@@ -39,15 +39,18 @@ tailwind.config={theme:{extend:{colors:{bg:'var(--bg)',card:'var(--card)',ink:'v
 </header>
 
 <section id="topo" class="py-12 sm:py-16" style="background:linear-gradient(160deg,var(--h1),var(--bg) 60%)">
-  <div class="wrap grid md:grid-cols-[1.05fr_.95fr] gap-x-14 gap-y-8 items-center">
-    <div>
+  <div class="wrap hero-grid">
+    <div class="hero-head">
       <span class="eyebrow">+100 FERRAMENTAS PARA NUTRICIONISTAS</span>
       <h1 class="text-[38px] sm:text-[56px] font-bold leading-[1.05] mt-5 max-w-[560px] mx-auto text-center">Você não precisa criar cada documento do seu atendimento <span class="text-gt">do zero</span></h1>
-      <p class="mt-5 text-[15.5px] leading-relaxed text-gy max-w-[480px]">Anamneses, questionários, fichas de evolução, roteiros, checklists e outros materiais reunidos em um só lugar — prontos para consultar, adaptar, baixar e imprimir.</p>
-      <div class="mt-7"><a href="#planos" class="btn btn-p hero-cta">QUERO ORGANIZAR MEU ATENDIMENTO →</a>
-      <p class="mt-3.5 hero-sub text-gy">A partir de <strong class="text-ink text-base font-extrabold" data-p="basic"></strong> · Compra única · Acesso imediato</p></div>
     </div>
-    <div class="bg-card border border-bd rounded-[22px] p-3.5 w-full max-w-[460px] md:ml-auto mx-auto shadow-[0_30px_60px_-30px_rgba(18,38,27,.14)]"><img src="images/hero-kit.jpg" alt="Kit NutriPerformance: anamnese no tablet e ficha de composição corporal na prancheta, sobre a mesa de atendimento" class="block w-full rounded-[14px] aspect-[4/3] object-cover" width="1255" height="941"></div>
+    <div class="hero-img"><img src="images/hero-kit.jpg" alt="Kit NutriPerformance: anamnese no tablet e ficha de composição corporal na prancheta, sobre a mesa de atendimento" class="block w-full aspect-[16/11] object-cover" width="1255" height="941" fetchpriority="high"></div>
+    <div class="hero-body">
+      <p class="text-[15.5px] leading-relaxed text-gy max-w-[480px]">Anamneses, questionários, fichas de evolução, roteiros, checklists e outros materiais reunidos em um só lugar — prontos para consultar, adaptar, baixar e imprimir.</p>
+      <div class="mt-7"><a href="#planos" class="btn btn-p hero-cta">QUERO ORGANIZAR MEU ATENDIMENTO →</a>
+      <p class="mt-3.5 hero-sub text-gy"><strong class="text-ink text-base font-extrabold" data-p="full"></strong> · Compra única · Acesso imediato</p>
+      <p class="mt-1.5 text-[12.5px] font-semibold text-gt">✓ Garantia de 7 dias · Acesso vitalício</p></div>
+    </div>
   </div>
 </section>
 
@@ -57,19 +60,14 @@ tailwind.config={theme:{extend:{colors:{bg:'var(--bg)',card:'var(--card)',ink:'v
   <p class="text-center mt-8 text-gy font-medium">E esse é só o começo: o acesso completo reúne 108 documentos e mais de 10 bônus, mais de 100 ferramentas prontas, com acesso vitalício.</p>
 </div></section>
 
-<section class="sec"><div class="wrap">
-  <div class="sh"><div class="eyebrow tag">ONDE O KIT ENTRA NA SUA ROTINA</div><h2>Um kit para acompanhar cada etapa do atendimento</h2></div>
-  <div class="grid md:grid-cols-3 gap-[18px]">
-    <div class="card p-[26px]"><div class="w-[38px] h-[38px] rounded-[10px] bg-gs text-g flex items-center justify-center mb-4 font-bold">1</div><h3 class="text-sm font-bold mb-2">Antes da consulta</h3><p class="text-[13.8px] text-gy leading-relaxed">Envie questionários e chegue ao atendimento com informações importantes do paciente já organizadas.</p></div>
-    <div class="card p-[26px]"><div class="w-[38px] h-[38px] rounded-[10px] bg-gs text-g flex items-center justify-center mb-4 font-bold">2</div><h3 class="text-sm font-bold mb-2">Durante a consulta</h3><p class="text-[13.8px] text-gy leading-relaxed">Use roteiros e fichas para conduzir o atendimento e registrar as informações sem precisar criar tudo na hora.</p></div>
-    <div class="card p-[26px]"><div class="w-[38px] h-[38px] rounded-[10px] bg-gs text-g flex items-center justify-center mb-4 font-bold">3</div><h3 class="text-sm font-bold mb-2">No acompanhamento</h3><p class="text-[13.8px] text-gy leading-relaxed">Acompanhe evolução, reavaliações e fechamento de cada ciclo com ferramentas já estruturadas.</p></div>
+<section class="sec !py-9"><div class="wrap max-w-[760px]">
+  <div class="sh !mb-6"><h2>Um kit para acompanhar cada etapa do atendimento</h2></div>
+  <div class="card divide-y divide-bd overflow-hidden">
+    <div class="flex gap-4 items-start p-5"><div class="w-[34px] h-[34px] shrink-0 rounded-[10px] bg-gs text-g flex items-center justify-center font-bold">1</div><div><h3 class="text-[15px] font-bold">Antes da consulta</h3><p class="mt-1 text-[13.8px] text-gy leading-relaxed">Envie questionários e chegue com as informações do paciente já organizadas.</p></div></div>
+    <div class="flex gap-4 items-start p-5"><div class="w-[34px] h-[34px] shrink-0 rounded-[10px] bg-gs text-g flex items-center justify-center font-bold">2</div><div><h3 class="text-[15px] font-bold">Durante a consulta</h3><p class="mt-1 text-[13.8px] text-gy leading-relaxed">Use roteiros e fichas para conduzir o atendimento sem criar tudo na hora.</p></div></div>
+    <div class="flex gap-4 items-start p-5"><div class="w-[34px] h-[34px] shrink-0 rounded-[10px] bg-gs text-g flex items-center justify-center font-bold">3</div><div><h3 class="text-[15px] font-bold">No acompanhamento</h3><p class="mt-1 text-[13.8px] text-gy leading-relaxed">Acompanhe evolução, reavaliações e o fechamento de cada ciclo.</p></div></div>
   </div>
-  <div class="mt-5 rounded-[10px] border p-5 sm:px-6 flex flex-col md:flex-row md:items-center justify-between gap-5" style="background:var(--gs);border-color:var(--gs2)">
-    <div><h4 class="text-[16.5px] font-bold max-w-[420px] leading-snug text-ink">O raciocínio clínico continua sendo seu. O NutriPerformance cuida da organização.</h4>
-    <p class="mt-1.5 text-[13px] text-gy max-w-[440px]">Nenhum material traz plano alimentar pronto: são ferramentas para conduzir cada etapa com método.</p>
-    <p class="mt-2 text-xs font-semibold text-gt">+100 ferramentas · Acesso vitalício</p></div>
-    <a href="#planos" class="btn btn-p !py-3 !px-5 !text-[13.5px] md:whitespace-nowrap">QUERO AS +100 FERRAMENTAS →</a>
-  </div>
+  <p class="mt-5 text-center text-[14px] text-gy">O raciocínio clínico continua sendo seu. O NutriPerformance cuida da organização.</p>
 </div></section>
 
 <section id="oferta" class="sec"><div class="wrap max-w-[760px]">
@@ -93,9 +91,9 @@ tailwind.config={theme:{extend:{colors:{bg:'var(--bg)',card:'var(--card)',ink:'v
 <section class="sec"><div class="wrap">
   <div class="sh"><div class="eyebrow tag">SEM FILTRO</div><h2>O kit fora do computador</h2><p>Imprima, leve para a consulta e tenha tudo sempre disponível. Imagens ilustrativas.</p></div>
   <div class="grid grid-cols-2 md:grid-cols-[1.15fr_1fr_1fr] gap-3 md:gap-4">
-    <figure class="col-span-2 md:col-span-1 relative rounded-2xl overflow-hidden bg-gs min-h-[320px] aspect-[4/5] md:aspect-auto shadow-[0_18px_34px_-24px_rgba(18,38,27,.18)]"><img src="images/nutri-atendimento.jpg" alt="Nutricionista sorrindo enquanto preenche uma ficha na prancheta, com notebook, celular e caderno sobre a mesa" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 40%" width="720" height="1290" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Atendimento organizado, do início ao fim</figcaption></figure>
-    <figure class="relative rounded-2xl overflow-hidden bg-gs"><img src="images/foto-fichas.jpg" alt="Fichas de anamnese esportiva do NutriPerformance impressas sobre a bancada" class="block w-full aspect-[4/5] object-cover" width="800" height="1000" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Fichas prontas para imprimir</figcaption></figure>
-    <figure class="relative rounded-2xl overflow-hidden bg-gs"><img src="images/foto-mesa.jpg" alt="Ficha de anamnese em uma prancheta, cercada por roteiro de atendimento, checklist e registro de evolução sobre a mesa" class="block w-full aspect-[4/5] object-cover" width="800" height="1000" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Tudo organizado na mesa</figcaption></figure>
+    <figure class="col-span-2 md:col-span-1 relative rounded-2xl overflow-hidden bg-gs min-h-[320px] aspect-[4/5] md:aspect-auto shadow-[0_18px_34px_-24px_rgba(18,38,27,.18)]"><img src="images/nutri-atendimento.jpg" alt="Nutricionista sorrindo enquanto analisa uma ficha impressa, com notebook e caderno sobre a mesa" class="absolute inset-0 w-full h-full object-cover" style="object-position:50% 30%" width="720" height="1290" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Atendimento organizado, do início ao fim</figcaption></figure>
+    <figure class="relative rounded-2xl overflow-hidden bg-gs"><img src="images/foto-fichas.jpg" alt="Anamnese completa, roteiro de consulta e checklist impressos sobre uma pasta verde" class="block w-full aspect-[4/5] object-cover" width="800" height="1000" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Fichas prontas para imprimir</figcaption></figure>
+    <figure class="relative rounded-2xl overflow-hidden bg-gs"><img src="images/foto-mesa.jpg" alt="Anamnese, roteiro de consulta, ficha de acompanhamento e registro de evolução organizados sobre a mesa" class="block w-full aspect-[4/5] object-cover" width="800" height="1000" loading="lazy" decoding="async"><figcaption class="absolute inset-x-2 bottom-2 md:inset-x-2.5 md:bottom-2.5 bg-white/90 text-[#0A0A0A] text-xs font-semibold rounded-[10px] px-2 md:px-2.5 py-1.5">Tudo organizado na mesa</figcaption></figure>
   </div>
 </div></section>
 
