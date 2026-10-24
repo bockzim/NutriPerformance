@@ -23,7 +23,7 @@ Pilha (soma R$297,00): Kit Esportivo R$69,90 + Complemento (3 linhas) R$79,90 + 
 Proposta original adaptada: "+100 ferramentas prontas, incluindo anamneses, questionários, fichas de evolução e roteiros, para preparar cada consulta em minutos". DISC, Eneagrama e Big Five não entram: não fazem parte deste produto.
 
 ## 4. Mapa de seções
-Header · Hero (`#topo`) · Prévia (carrossel de 21 capas) · 3 momentos + callout · Oferta completa · Sem filtro (3 imagens) · Planos (`#planos`) + comparação · Garantia 7 dias · FAQ (8) · Último passo (`#fim`) + rodapé · Barra fixa de CTA (mobile). A seção de depoimentos e prints foi removida · Popup de upsell.
+Header · Hero (`#topo`) · Prévia (carrossel de 21 capas) · 3 momentos + callout · Oferta completa · Sem filtro (3 imagens) · Planos (`#planos`) + comparação · Garantia 7 dias · FAQ (8) · Último passo (`#fim`) + rodapé · Barra fixa de CTA (mobile). Prova social (prints reais em `images/provas/`, lista `PROVAS` no `js/main.js`) · Popup de upsell.
 
 ## 5. Pendências
 - Imagens: todas as da página estão preenchidas (ver `LISTA-IMAGENS.md`).
